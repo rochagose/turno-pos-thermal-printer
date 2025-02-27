@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+{% block title %}Turno{% endblock %}
+
+{% block customCSS%}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<body class="gradient-custom d-flex justify-content-center align-items-center vh-100 bg-light">
+    <form action="/turn" meethod = "POST">
+        <div class="d-flex justify-content-center">
+            <div class="gradient-custom2 card text-center p-4 shadow-lg" style="max-width: 500px;">
+                <div class="text-center my-5">
+                    <img src="{{ url_for('static', filename = 'img/logo.png') }}" alt="logo" width="150">
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg mt-3 w-100">Tomar Turno</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+{% endblock %}
